@@ -14,9 +14,6 @@ defaults:
 
 constants:
   blur_sigma: 5
-  rotations_all:
-    - [0, 0, 0]
-  rotations_all_count: 1
 
 experiment:
   _target_: tbp.monty.frameworks.experiments.pretraining_experiments.MontySupervisedObjectPretrainingExperiment
