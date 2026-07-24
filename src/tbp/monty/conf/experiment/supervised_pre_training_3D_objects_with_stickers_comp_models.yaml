@@ -30,7 +30,7 @@ experiment:
     supervised_lm_ids:
       - learning_module_2
     logging:
-      run_name: supervised_pre_training_objects_with_stickers_comp_models
+      run_name: supervised_pre_training_3D_objects_with_stickers_comp_models
       output_dir: ${path.expanduser:${oc.env:MONTY_MODELS}/heterarch_3sm_composite}
     environment:
       env_init_args:

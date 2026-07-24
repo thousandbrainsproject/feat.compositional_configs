@@ -174,11 +174,7 @@ experiment:
       - - 0
       - - 1
       - - 2
-      lm_to_lm_matrix:
-      - []
-      - []
-      - - 0
-        - 1
+      lm_to_lm_matrix: null
       lm_to_lm_vote_matrix: null
     environment:
       env_init_args:
@@ -285,8 +281,6 @@ experiment:
         use_semantic_sensor: false
     eval_env_interface_args:
       parent_to_child_mapping:
-        001_cube:
-        - 001_cube
         002_cube_tbp_horz:
         - 001_cube
         - 021_logo_tbp
@@ -299,8 +293,6 @@ experiment:
         005_cube_numenta_vert:
         - 001_cube
         - 022_logo_numenta
-        006_disk:
-        - 006_disk
         007_disk_tbp_horz:
         - 006_disk
         - 021_logo_tbp
@@ -313,8 +305,6 @@ experiment:
         010_disk_numenta_vert:
         - 006_disk
         - 022_logo_numenta
-        011_cylinder:
-        - 011_cylinder
         012_cylinder_tbp_horz:
         - 011_cylinder
         - 021_logo_tbp
@@ -327,8 +317,6 @@ experiment:
         015_cylinder_numenta_vert:
         - 011_cylinder
         - 022_logo_numenta
-        016_sphere:
-        - 016_sphere
         017_sphere_tbp_horz:
         - 016_sphere
         - 021_logo_tbp
@@ -341,12 +329,6 @@ experiment:
         020_sphere_numenta_vert:
         - 016_sphere
         - 022_logo_numenta
-        021_logo_tbp:
-        - 021_logo_tbp
-        022_logo_numenta:
-        - 022_logo_numenta
-        023_mug:
-        - 023_mug
         024_mug_tbp_horz:
         - 023_mug
         - 021_logo_tbp
@@ -359,34 +341,26 @@ experiment:
         027_mug_numenta_vert:
         - 023_mug
         - 022_logo_numenta
-        028_mug_tbp_horz_bent:
-        - 023_mug
-        - 021_logo_tbp
       object_names:
-      - 001_cube
-      - 006_disk
       - 002_cube_tbp_horz
-      - 004_cube_numenta_horz
-      - 007_disk_tbp_horz
-      - 009_disk_numenta_horz
-      - 011_cylinder
-      - 016_sphere
-      - 023_mug
-      - 012_cylinder_tbp_horz
-      - 014_cylinder_numenta_horz
-      - 017_sphere_tbp_horz
-      - 019_sphere_numenta_horz
-      - 024_mug_tbp_horz
-      - 026_mug_numenta_horz
       - 003_cube_tbp_vert
+      - 004_cube_numenta_horz
       - 005_cube_numenta_vert
+      - 007_disk_tbp_horz
       - 008_disk_tbp_vert
+      - 009_disk_numenta_horz
       - 010_disk_numenta_vert
+      - 012_cylinder_tbp_horz
       - 013_cylinder_tbp_vert
+      - 014_cylinder_numenta_horz
       - 015_cylinder_numenta_vert
+      - 017_sphere_tbp_horz
       - 018_sphere_tbp_vert
+      - 019_sphere_numenta_horz
       - 020_sphere_numenta_vert
+      - 024_mug_tbp_horz
       - 025_mug_tbp_vert
+      - 026_mug_numenta_horz
       - 027_mug_numenta_vert
       object_init_sampler:
         _target_: tbp.monty.frameworks.environments.object_init_samplers.Predefined
@@ -416,14 +390,14 @@ experiment:
       wandb_id:
         _target_: wandb.util.generate_id
       wandb_group: benchmark_experiments
-      run_name: base_infer_objects_with_stickers_comp_models
+      run_name: base_infer_3D_objects_with_stickers_monolithic_models
     show_sensor_output: false
     max_train_steps: 1000
     max_eval_steps: 100
     max_total_steps: 6000
     n_train_epochs: 3
     n_eval_epochs: ${constants.rotations_all_count}
-    model_name_or_path: ${path.expanduser:${oc.env:MONTY_MODELS}/heterarch_3sm_composite/supervised_pre_training_objects_with_stickers_comp_models/pretrained/}
+    model_name_or_path: ${path.expanduser:${oc.env:MONTY_MODELS}/monolithic_3lm/supervised_pre_training_objects_with_stickers_3lm_monolithic_models/pretrained/}
     min_lms_match: 1
     seed: 42
     supervised_lm_ids: []
