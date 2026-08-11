@@ -5,29 +5,29 @@ train_env_interface_args:
   parent_to_child_mapping: null
   object_names:
   - 001_cube
-  - 006_disk
   - 002_cube_tbp_horz
-  - 004_cube_numenta_horz
-  - 007_disk_tbp_horz
-  - 009_disk_numenta_horz
-  - 011_cylinder
-  - 016_sphere
-  - 023_mug
-  - 012_cylinder_tbp_horz
-  - 014_cylinder_numenta_horz
-  - 017_sphere_tbp_horz
-  - 019_sphere_numenta_horz
-  - 024_mug_tbp_horz
-  - 026_mug_numenta_horz
   - 003_cube_tbp_vert
+  - 004_cube_numenta_horz
   - 005_cube_numenta_vert
+  - 006_disk
+  - 007_disk_tbp_horz
   - 008_disk_tbp_vert
+  - 009_disk_numenta_horz
   - 010_disk_numenta_vert
+  - 011_cylinder
+  - 012_cylinder_tbp_horz
   - 013_cylinder_tbp_vert
+  - 014_cylinder_numenta_horz
   - 015_cylinder_numenta_vert
+  - 016_sphere
+  - 017_sphere_tbp_horz
   - 018_sphere_tbp_vert
+  - 019_sphere_numenta_horz
   - 020_sphere_numenta_vert
+  - 023_mug
+  - 024_mug_tbp_horz
   - 025_mug_tbp_vert
+  - 026_mug_numenta_horz
   - 027_mug_numenta_vert
   object_init_sampler:
     _target_: tbp.monty.frameworks.environments.object_init_samplers.Predefined
